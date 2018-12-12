@@ -19,7 +19,6 @@
         <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesLocal" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesMaster" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.CategorySkillsCustom" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.CategorySkillsMaster" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.Organization" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.OrganizationUser" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.SkillsCustom" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
@@ -29,6 +28,7 @@
         <AssociationConnector Association="SkillResultsDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="SkillResultsDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="SkillResultsDBModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.CategorySkillsMaster" Width="1.5" PointX="10.625" PointY="4.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

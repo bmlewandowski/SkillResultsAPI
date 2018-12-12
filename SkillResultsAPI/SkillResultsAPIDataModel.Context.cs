@@ -41,13 +41,13 @@ namespace SkillResultsAPI
         public virtual DbSet<CategoriesLocal> CategoriesLocals { get; set; }
         public virtual DbSet<CategoriesMaster> CategoriesMasters { get; set; }
         public virtual DbSet<CategorySkillsCustom> CategorySkillsCustoms { get; set; }
-        public virtual DbSet<CategorySkillsMaster> CategorySkillsMasters { get; set; }
         public virtual DbSet<Organization> Organizations { get; set; }
         public virtual DbSet<OrganizationUser> OrganizationUsers { get; set; }
         public virtual DbSet<SkillsCustom> SkillsCustoms { get; set; }
         public virtual DbSet<SkillsLocal> SkillsLocals { get; set; }
         public virtual DbSet<SkillsMaster> SkillsMasters { get; set; }
         public virtual DbSet<UserSkill> UserSkills { get; set; }
+        public virtual DbSet<CategorySkillsMaster> CategorySkillsMasters { get; set; }
     
         public virtual ObjectResult<Nullable<int>> delete_areacategoriescustoms(Nullable<int> categoryid)
         {

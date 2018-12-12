@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SkillResultsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SkillResultsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="__MigrationHistory">
           <Key>
             <PropertyRef Name="MigrationId" />
@@ -188,6 +188,7 @@
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="CategoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SkillId" Type="int" Nullable="false" />
+          <Property Name="SkillType" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -390,8 +391,7 @@
             <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SkillResultsDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -568,17 +568,6 @@
           <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="CategorySkillsMaster">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CategoryId" Type="Int32" Nullable="false" />
-          <Property Name="CategoryType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SkillId" Type="Int32" Nullable="false" />
-          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
-          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
         <EntityType Name="Organization">
           <Key>
             <PropertyRef Name="Id" />
@@ -705,7 +694,6 @@
           <EntitySet Name="CategoriesLocals" EntityType="Self.CategoriesLocal" />
           <EntitySet Name="CategoriesMasters" EntityType="Self.CategoriesMaster" />
           <EntitySet Name="CategorySkillsCustoms" EntityType="Self.CategorySkillsCustom" />
-          <EntitySet Name="CategorySkillsMasters" EntityType="Self.CategorySkillsMaster" />
           <EntitySet Name="Organizations" EntityType="Self.Organization" />
           <EntitySet Name="OrganizationUsers" EntityType="Self.OrganizationUser" />
           <EntitySet Name="SkillsCustoms" EntityType="Self.SkillsCustom" />
@@ -725,29 +713,30 @@
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
           </AssociationSet>
           <FunctionImport Name="delete_areacategoriescustoms" ReturnType="Collection(Int32)">
-            <Parameter Name="categoryid" Mode="In" Type="Int32" />
+          <Parameter Name="categoryid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="delete_catagory" ReturnType="Collection(Int32)">
-            <Parameter Name="catagoryid" Mode="In" Type="Int32" />
+          <Parameter Name="catagoryid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="delete_categoryskillcustoms" ReturnType="Collection(Int32)">
-            <Parameter Name="skillid" Mode="In" Type="Int32" />
+          <Parameter Name="skillid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="get_categoriesbyareacustoms" ReturnType="Collection(SkillResultsDBModel.get_categoriesbyareacustoms_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="get_categoriesbyareamasters" ReturnType="Collection(SkillResultsDBModel.get_categoriesbyareamasters_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="get_skillsbycategorycustoms" ReturnType="Collection(SkillResultsDBModel.get_skillsbycategorycustoms_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="get_skillsbycategorymasters" ReturnType="Collection(SkillResultsDBModel.get_skillsbycategorymasters_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="user_object" ReturnType="Collection(SkillResultsDBModel.user_object_Result)">
-            <Parameter Name="userId" Mode="In" Type="String" />
+          <Parameter Name="userId" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="CategorySkillsMasters" EntityType="SkillResultsDBModel.CategorySkillsMaster" />
         </EntityContainer>
         <ComplexType Name="get_categoriesbyareacustoms_Result">
           <Property Type="Int32" Name="id" Nullable="true" />
@@ -794,6 +783,18 @@
           <Property Type="String" Name="OrgName" Nullable="true" MaxLength="100" />
           <Property Type="DateTime" Name="OrgCreatedOn" Nullable="true" />
         </ComplexType>
+        <EntityType Name="CategorySkillsMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SkillId" Type="Int32" Nullable="false" />
+          <Property Name="SkillType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -978,18 +979,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CategorySkillsMasters">
-            <EntityTypeMapping TypeName="SkillResultsDBModel.CategorySkillsMaster">
-              <MappingFragment StoreEntitySet="CategorySkillsMasters">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-                <ScalarProperty Name="CategoryType" ColumnName="CategoryType" />
-                <ScalarProperty Name="SkillId" ColumnName="SkillId" />
-                <ScalarProperty Name="Created" ColumnName="Created" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Organizations">
             <EntityTypeMapping TypeName="SkillResultsDBModel.Organization">
               <MappingFragment StoreEntitySet="Organizations">
@@ -1151,6 +1140,19 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="CategorySkillsMasters">
+            <EntityTypeMapping TypeName="SkillResultsDBModel.CategorySkillsMaster">
+              <MappingFragment StoreEntitySet="CategorySkillsMasters">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="SkillType" ColumnName="SkillType" />
+                <ScalarProperty Name="SkillId" ColumnName="SkillId" />
+                <ScalarProperty Name="CategoryType" ColumnName="CategoryType" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

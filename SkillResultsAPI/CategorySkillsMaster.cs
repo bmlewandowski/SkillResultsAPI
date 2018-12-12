@@ -18,6 +18,7 @@ namespace SkillResultsAPI
         public int CategoryId { get; set; }
         public string CategoryType { get; set; }
         public int SkillId { get; set; }
+        public string SkillType { get; set; }
         public System.DateTime Created { get; set; }
         public string Type { get; set; }
     }
