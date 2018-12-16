@@ -5,30 +5,30 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e96ab7075790443998036ec45e162464" Name="Diagram1">
-        <EntityTypeShape EntityType="SkillResultsDBModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AreaCategoriesCustom" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AreaCategoriesMaster" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AreasCustom" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AreasLocal" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AreasMaster" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.C__MigrationHistory" Width="1.5" PointX="0.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AreaCategoriesCustom" Width="1.5" PointX="2.125" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AreaCategoriesMaster" Width="1.5" PointX="0.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AreasLocal" Width="1.5" PointX="7" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetRole" Width="1.5" PointX="0.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesCustom" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesLocal" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesMaster" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.CategorySkillsCustom" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.Organization" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.OrganizationUser" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.SkillsCustom" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.SkillsLocal" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.SkillsMaster" Width="1.5" PointX="8.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.UserSkill" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesLocal" Width="1.5" PointX="8.625" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.CategorySkillsCustom" Width="1.5" PointX="5.375" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.Organization" Width="1.5" PointX="7" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.OrganizationUser" Width="1.5" PointX="7" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.SkillsLocal" Width="1.5" PointX="10.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.UserSkill" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="SkillResultsDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="SkillResultsDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="SkillResultsDBModel.AspNetUserRoles" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.CategorySkillsMaster" Width="1.5" PointX="10.625" PointY="4.5" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.CategorySkillsMaster" Width="1.5" PointX="3.75" PointY="6.5" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AreasCustom" Width="1.5" PointX="2.125" PointY="9.625" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AreasMaster" Width="1.5" PointX="0.5" PointY="9.625" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesCustom" Width="1.5" PointX="5.375" PointY="9.625" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesMaster" Width="1.5" PointX="3.75" PointY="9.625" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.SkillsCustom" Width="1.5" PointX="8.625" PointY="9.625" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.SkillsMaster" Width="1.5" PointX="7" PointY="9.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

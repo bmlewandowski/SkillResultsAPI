@@ -51,6 +51,16 @@ namespace SkillResultsAPI.Controllers
                 return BadRequest();
             }
 
+            //Set Value of Name for Comparison
+            areasMaster.Value = GetValue.Converted(areasMaster.Name);
+
+            //See if Value exists
+            var exists = await db.AreasMasters.Where(x => x.Value == areasMaster.Value).FirstOrDefaultAsync();
+            if (exists != null)
+            {
+                return BadRequest("Duplicate: " + exists.Name + " " + exists.Id + " " + exists.Type);
+            }
+
             db.Entry(areasMaster).State = EntityState.Modified;
 
             try
@@ -76,14 +86,30 @@ namespace SkillResultsAPI.Controllers
         [ResponseType(typeof(AreasMaster))]
         public async Task<IHttpActionResult> PostAreasMaster(AreasMaster areasMaster)
         {
+
+            //Get Current Date & Time and apply to the Model
+            areasMaster.Created = DateTime.Now;
+
+            //Set Value of Name for Comparison
+            areasMaster.Value = GetValue.Converted(areasMaster.Name);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
+            //See if Value exists
+            var exists = await db.AreasMasters.Where(x => x.Value == areasMaster.Value).FirstOrDefaultAsync();
+            if (exists != null)
+            {
+                return BadRequest("Duplicate: " + exists.Name + " " + exists.Id + " " + exists.Type);
+            }
+
+            //Add the Model to the Database
             db.AreasMasters.Add(areasMaster);
             await db.SaveChangesAsync();
 
+            //Return call
             return CreatedAtRoute("DefaultApi", new { id = areasMaster.Id }, areasMaster);
         }
 

@@ -30,24 +30,24 @@ namespace SkillResultsAPI
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<AreaCategoriesCustom> AreaCategoriesCustoms { get; set; }
         public virtual DbSet<AreaCategoriesMaster> AreaCategoriesMasters { get; set; }
-        public virtual DbSet<AreasCustom> AreasCustoms { get; set; }
         public virtual DbSet<AreasLocal> AreasLocals { get; set; }
-        public virtual DbSet<AreasMaster> AreasMasters { get; set; }
         public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
-        public virtual DbSet<CategoriesCustom> CategoriesCustoms { get; set; }
         public virtual DbSet<CategoriesLocal> CategoriesLocals { get; set; }
-        public virtual DbSet<CategoriesMaster> CategoriesMasters { get; set; }
         public virtual DbSet<CategorySkillsCustom> CategorySkillsCustoms { get; set; }
         public virtual DbSet<Organization> Organizations { get; set; }
         public virtual DbSet<OrganizationUser> OrganizationUsers { get; set; }
-        public virtual DbSet<SkillsCustom> SkillsCustoms { get; set; }
         public virtual DbSet<SkillsLocal> SkillsLocals { get; set; }
-        public virtual DbSet<SkillsMaster> SkillsMasters { get; set; }
         public virtual DbSet<UserSkill> UserSkills { get; set; }
         public virtual DbSet<CategorySkillsMaster> CategorySkillsMasters { get; set; }
+        public virtual DbSet<AreasCustom> AreasCustoms { get; set; }
+        public virtual DbSet<AreasMaster> AreasMasters { get; set; }
+        public virtual DbSet<CategoriesCustom> CategoriesCustoms { get; set; }
+        public virtual DbSet<CategoriesMaster> CategoriesMasters { get; set; }
+        public virtual DbSet<SkillsCustom> SkillsCustoms { get; set; }
+        public virtual DbSet<SkillsMaster> SkillsMasters { get; set; }
     
         public virtual ObjectResult<Nullable<int>> delete_areacategoriescustoms(Nullable<int> categoryid)
         {

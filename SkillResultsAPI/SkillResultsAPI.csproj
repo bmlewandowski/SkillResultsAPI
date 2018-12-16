@@ -249,6 +249,7 @@
       <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Classes\FetchTemplate.cs" />
+    <Compile Include="Classes\GetValue.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AreaCategoriesCustomsController.cs" />
     <Compile Include="Controllers\AreaCategoriesMastersController.cs" />

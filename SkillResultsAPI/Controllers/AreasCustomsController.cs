@@ -18,18 +18,6 @@ namespace SkillResultsAPI.Controllers
     [Authorize]
     public class AreasCustomsController : ApiController
     {
-        /// <summary>
-        /// Get Current User ID from Claim of Auth Token
-        /// </summary>
-        /// <returns></returns>
-        [NonAction]
-        public string getUserId()
-        {
-            var claimsIdentity = (ClaimsIdentity)this.RequestContext.Principal.Identity;
-            var userId = claimsIdentity.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
-            return userId;
-        }
-
         private SkillResultsDBEntities db = new SkillResultsDBEntities();
 
         // GET: api/AreasCustoms
@@ -65,6 +53,16 @@ namespace SkillResultsAPI.Controllers
                 return BadRequest();
             }
 
+            //Set Value of Name for Comparison
+            areasCustom.Value = GetValue.Converted(areasCustom.Name);
+
+            //See if Value exists
+            var exists = await db.AreasCustoms.Where(x => x.Value == areasCustom.Value).FirstOrDefaultAsync();
+            if (exists != null)
+            {
+                return BadRequest("Duplicate: " + exists.Name + " " + exists.Id + " " + exists.Type);
+            }
+
             db.Entry(areasCustom).State = EntityState.Modified;
 
             try
@@ -97,6 +95,9 @@ namespace SkillResultsAPI.Controllers
             //Get Current Date & Time and apply to the Model
             areasCustom.Created = DateTime.Now;
 
+            //Set Value of Name for Comparison
+            areasCustom.Value = GetValue.Converted(areasCustom.Name);
+
             //Get Current User and apply to the Model
             areasCustom.UserId = User.UserId;
 
@@ -110,6 +111,13 @@ namespace SkillResultsAPI.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
+            }
+
+            //See if Value exists
+            var exists = await db.AreasCustoms.Where(x => x.Value == areasCustom.Value).FirstOrDefaultAsync();
+            if (exists != null)
+            {
+                return BadRequest("Duplicate: " + exists.Name + " " + exists.Id + " " + exists.Type);
             }
 
             //Add the Model to the Database

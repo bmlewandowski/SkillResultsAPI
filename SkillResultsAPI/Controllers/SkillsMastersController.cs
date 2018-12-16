@@ -61,6 +61,16 @@ namespace SkillResultsAPI.Controllers
                 return BadRequest();
             }
 
+            //Set Value of Name for Comparison
+            skillsMaster.Value = GetValue.Converted(skillsMaster.Name);
+
+            //See if Value exists
+            var exists = await db.SkillsMasters.Where(x => x.Value == skillsMaster.Value).FirstOrDefaultAsync();
+            if (exists != null)
+            {
+                return BadRequest("Duplicate: " + exists.Name + " " + exists.Id + " " + exists.Type);
+            }
+
             db.Entry(skillsMaster).State = EntityState.Modified;
 
             try
@@ -86,15 +96,26 @@ namespace SkillResultsAPI.Controllers
         [ResponseType(typeof(SkillsMaster))]
         public async Task<IHttpActionResult> PostSkillsMaster(SkillsMaster skillsMaster)
         {
+
+            //Get Current Date & Time and apply to the Model
+            skillsMaster.Created = DateTime.Now;
+
+            //Set Value of Name for Comparison
+            skillsMaster.Value = GetValue.Converted(skillsMaster.Name);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
+            //See if Value exists
+            var exists = await db.SkillsMasters.Where(x => x.Value == skillsMaster.Value).FirstOrDefaultAsync();
+            if (exists != null)
+            {
+                return BadRequest("Duplicate: " + exists.Name + " " + exists.Id + " " + exists.Type);
+            }
 
-            //Get Current Date & Time and apply to the Model
-            skillsMaster.Created = DateTime.Now;
-
+            //Add the Model to the Database
             db.SkillsMasters.Add(skillsMaster);
             await db.SaveChangesAsync();
 

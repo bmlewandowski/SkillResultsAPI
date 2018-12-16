@@ -16,11 +16,12 @@ namespace SkillResultsAPI
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Value { get; set; }
+        public string Description { get; set; }
+        public System.DateTime Created { get; set; }
+        public bool Hidden { get; set; }
+        public string Type { get; set; }
         public string UserId { get; set; }
         public string OrgId { get; set; }
-        public string Description { get; set; }
-        public bool Hidden { get; set; }
-        public System.DateTime Created { get; set; }
-        public string Type { get; set; }
     }
 }
