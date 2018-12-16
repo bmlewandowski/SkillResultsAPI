@@ -76,6 +76,10 @@ namespace SkillResultsAPI.Controllers
         [ResponseType(typeof(CategorySkillsMaster))]
         public async Task<IHttpActionResult> PostCategorySkillsMaster(CategorySkillsMaster categorySkillsMaster)
         {
+
+            //Get Current Date & Time and apply to the Model
+            categorySkillsMaster.Created = DateTime.Now;
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

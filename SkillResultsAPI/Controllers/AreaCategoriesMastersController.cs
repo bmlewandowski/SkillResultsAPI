@@ -75,6 +75,10 @@ namespace SkillResultsAPI.Controllers
         [ResponseType(typeof(AreaCategoriesMaster))]
         public async Task<IHttpActionResult> PostAreaCategoriesMaster(AreaCategoriesMaster areaCategoriesMaster)
         {
+
+            //Get Current Date & Time and apply to the Model
+            areaCategoriesMaster.Created = DateTime.Now;
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
