@@ -19,7 +19,7 @@ namespace SkillResultsAPI
             string trimname = name.Trim();
 
             //replace spaces and multiple spaces with dash
-            string dashname = Regex.Replace(trimname, @"\s+", "-");
+            string dashname = Regex.Replace(trimname, @"\s+", "-").Replace(' ', '-');
 
             //covert to lowercase
             string value = dashname.ToLower();
