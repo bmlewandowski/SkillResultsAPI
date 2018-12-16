@@ -13,6 +13,7 @@ using SkillResultsAPI;
 
 namespace SkillResultsAPI.Controllers
 {
+    [Authorize]
     public class AreaCategoriesMastersController : ApiController
     {
         private SkillResultsDBEntities db = new SkillResultsDBEntities();
