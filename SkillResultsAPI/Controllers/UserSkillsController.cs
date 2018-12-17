@@ -34,24 +34,22 @@ namespace SkillResultsAPI.Controllers
         /// <param name="type"></param>
         /// <returns></returns>
         [Route("api/UserSkills/{id}/{type}")]
-        public async Task<IHttpActionResult> GetUsersSkillDetails(int id, string type)
+        public async Task<IHttpActionResult> GetUsersSkillDetails(string id, string type)
         {
             if (type == "master")
 
             {
                 var query = from usr in db.UserSkills
                             join ski in db.SkillsMasters on usr.SkillId equals ski.Id
-                            where usr.SkillId == id
+                            where usr.UserId == id && usr.Type == "master"
                             select new
                             {
-                                usr.Id,
-                                usr.SkillId,
                                 usr.Rating,
                                 usr.Created,
                                 usr.Modified,
-                                usr.Private,
                                 ski.Name,
                                 ski.Description,
+                                ski.Id,
                                 ski.Type
 
                             };
@@ -59,22 +57,19 @@ namespace SkillResultsAPI.Controllers
                 return Ok(query);
 
             }
-
             else
             {
                 var query = from usr in db.UserSkills
                             join ski in db.SkillsCustoms on usr.SkillId equals ski.Id
-                            where usr.SkillId == id
+                            where usr.UserId == id && usr.Type == "custom"
                             select new
                             {
-                                usr.Id,
-                                usr.SkillId,
                                 usr.Rating,
                                 usr.Created,
                                 usr.Modified,
-                                usr.Private,
                                 ski.Name,
                                 ski.Description,
+                                ski.Id,
                                 ski.Type
 
                             };
