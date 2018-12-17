@@ -91,10 +91,10 @@ namespace SkillResultsAPI.Controllers
             //Set the Area Type to the Model
             categorySkillsCustom.Type = "custom";
 
-            //Set the Area Type to the Model
-            categorySkillsCustom.CategoryType = "custom";
+            //Set the Category Type to the Model -- Situational
+            //categorySkillsCustom.CategoryType = "custom";
 
-            //Set the Area Type to the Model
+            //Set the Skill Type to the Model
             categorySkillsCustom.SkillType = "custom";
 
             if (!ModelState.IsValid)
