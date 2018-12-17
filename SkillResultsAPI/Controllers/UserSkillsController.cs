@@ -19,7 +19,6 @@ namespace SkillResultsAPI.Controllers
     public class UserSkillsController : ApiController
     {
         private SkillResultsDBEntities db = new SkillResultsDBEntities();
-
         // GET: api/UserSkills
         public IQueryable<UserSkill> GetUserSkills()
         {
@@ -34,8 +33,67 @@ namespace SkillResultsAPI.Controllers
         /// <param name="type"></param>
         /// <returns></returns>
         [Route("api/UserSkills/{id}/{type}")]
-        public async Task<IHttpActionResult> GetUsersSkillDetails(string id, string type)
+        public async Task<IHttpActionResult> GetUsersSkillDetails(int id, string type)
         {
+            if (type == "master")
+
+            {
+                var query = from usr in db.UserSkills
+                            join ski in db.SkillsMasters on usr.SkillId equals ski.Id
+                            where usr.SkillId == id
+                            select new
+                            {
+                                usr.Id,
+                                usr.SkillId,
+                                usr.Rating,
+                                usr.Created,
+                                usr.Modified,
+                                usr.Private,
+                                ski.Name,
+                                ski.Description,
+                                ski.Type
+
+                            };
+
+                return Ok(query);
+
+            }
+
+            else
+            {
+                var query = from usr in db.UserSkills
+                            join ski in db.SkillsCustoms on usr.SkillId equals ski.Id
+                            where usr.SkillId == id
+                            select new
+                            {
+                                usr.Id,
+                                usr.SkillId,
+                                usr.Rating,
+                                usr.Created,
+                                usr.Modified,
+                                usr.Private,
+                                ski.Name,
+                                ski.Description,
+                                ski.Type
+
+                            };
+
+                return Ok(query);
+            }
+
+        }
+
+        // GET: api/UserSkills/GetUsersSkills/5/custom
+        /// <summary>
+        /// Returns the Skills associated with a User
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        [Route("api/UserSkills/GetUsersSkills/{id}/{type}")]
+        public async Task<IHttpActionResult> GetUsersSkills(string id, string type)
+        {
+
             if (type == "master")
 
             {
@@ -62,60 +120,6 @@ namespace SkillResultsAPI.Controllers
                 var query = from usr in db.UserSkills
                             join ski in db.SkillsCustoms on usr.SkillId equals ski.Id
                             where usr.UserId == id && usr.Type == "custom"
-                            select new
-                            {
-                                usr.Rating,
-                                usr.Created,
-                                usr.Modified,
-                                ski.Name,
-                                ski.Description,
-                                ski.Id,
-                                ski.Type
-
-                            };
-
-                return Ok(query);
-            }
-
-        }
-
-        // GET: api/UserSkills/GetUsersSkills/5/custom
-        /// <summary>
-        /// Returns the Skills associated with a User
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        [Route("api/UserSkills/GetUsersSkills/{id}/{type}")]
-        public async Task<IHttpActionResult> GetUsersSkills(string id, string type)
-        {
-
-            if (type == "master")
-
-            {
-                var query = from usr in db.UserSkills
-                            join ski in db.SkillsMasters on usr.SkillId equals ski.Id
-                            where usr.UserId == id
-                            select new
-                            {
-                                usr.Rating,
-                                usr.Created,
-                                usr.Modified,
-                                ski.Name,
-                                ski.Description,
-                                ski.Id,
-                                ski.Type
-
-                            };
-
-                return Ok(query);
-
-            }
-            else
-            {
-                var query = from usr in db.UserSkills
-                            join ski in db.SkillsCustoms on usr.SkillId equals ski.Id
-                            where usr.UserId == id
                             select new
                             {
                                 usr.Rating,
@@ -191,7 +195,7 @@ namespace SkillResultsAPI.Controllers
             var User = new AccountController().getUser();
             userSkill.UserId = User.UserId;
             userSkill.Modified = DateTime.Now;
-            
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -225,7 +229,7 @@ namespace SkillResultsAPI.Controllers
                     throw;
                 }
 
-       
+
             }
             catch (DbUpdateConcurrencyException)
             {
