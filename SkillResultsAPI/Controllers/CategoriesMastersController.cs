@@ -43,7 +43,10 @@ namespace SkillResultsAPI.Controllers
         [ResponseType(typeof(CategoriesMaster))]
         public IEnumerable<CategoriesMaster> GetCategoriesbyAreaMaster(int id)
         {
-            string sqlstring = "EXEC dbo.get_categoriesbyareamasters @id = '" + id + "'";
+            //Get Current User from Claim Token
+            var User = new AccountController().getUser();
+
+            string sqlstring = "EXEC dbo.get_categoriesbyareamasters @id = '" + id + "', @orgid = '" + User.OrgId + "'";
             IEnumerable<CategoriesMaster> dataObj = db.Database.SqlQuery<CategoriesMaster>(sqlstring);
             return dataObj;
         }

@@ -47,7 +47,10 @@ namespace SkillResultsAPI.Controllers
         [ResponseType(typeof(SkillsCustom))]
         public IEnumerable<SkillsCustom> GetSkillsGroupCustoms(int id)
         {
-            string sqlstring = "EXEC dbo.get_skillsbycategorycustoms @id = '" + id + "'";
+            //Get Current User from Claim Token
+            var User = new AccountController().getUser();
+
+            string sqlstring = "EXEC dbo.get_skillsbycategorycustoms @id = '" + id + "', @orgid = '" + User.OrgId + "'";
             IEnumerable<SkillsCustom> dataObj = db.Database.SqlQuery<SkillsCustom>(sqlstring);
             return dataObj;
         }

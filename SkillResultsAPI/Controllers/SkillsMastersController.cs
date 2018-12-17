@@ -42,7 +42,10 @@ namespace SkillResultsAPI.Controllers
         [ResponseType(typeof(SkillsMaster))]
         public IEnumerable<SkillsMaster> GetSkillsGroupMasters(int id)
         {
-            string sqlstring = "EXEC dbo.get_skillsbycategorymasters @id = '" + id + "'";
+            //Get Current User from Claim Token
+            var User = new AccountController().getUser();
+
+            string sqlstring = "EXEC dbo.get_skillsbycategorymasters @id = '" + id + "', @orgid = '" + User.OrgId + "'";
             IEnumerable<SkillsMaster> dataObj = db.Database.SqlQuery<SkillsMaster>(sqlstring);
             return dataObj;
         }
