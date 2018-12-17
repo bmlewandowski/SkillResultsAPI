@@ -23,7 +23,12 @@ namespace SkillResultsAPI.Controllers
         // GET: api/AreasCustoms
         public IQueryable<AreasCustom> GetAreasCustoms()
         {
-            return db.AreasCustoms;
+            //Get Current User from Claim Token
+            var User = new AccountController().getUser();
+
+            //return db.AreasCustoms
+            //Select just the Customs for Users Orginization
+            return db.AreasCustoms.Where(x => x.OrgId == User.OrgId.ToString());
         }
 
         // GET: api/AreasCustoms/5

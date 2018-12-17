@@ -18,6 +18,17 @@ namespace SkillResultsAPI.Controllers
     {
         private SkillResultsDBEntities db = new SkillResultsDBEntities();
 
+        // GET: api/SkillsCustoms
+        public IQueryable<SkillsCustom> GetSkillsCustoms()
+        {
+            //Get Current User from Claim Token
+            var User = new AccountController().getUser();
+
+            //return db.SkillsCustoms;
+            //Select just the Customs for Users Orginization
+            return db.SkillsCustoms.Where(x => x.OrgId == User.OrgId.ToString());
+        }
+
         // GET: api/SkillsCustoms/5
         [ResponseType(typeof(SkillsCustom))]
         public async Task<IHttpActionResult> GetSkillsCustom(int id)
