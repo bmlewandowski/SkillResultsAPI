@@ -48,6 +48,12 @@ namespace SkillResultsAPI
         public virtual DbSet<CategoriesMaster> CategoriesMasters { get; set; }
         public virtual DbSet<SkillsCustom> SkillsCustoms { get; set; }
         public virtual DbSet<SkillsMaster> SkillsMasters { get; set; }
+        public virtual DbSet<Certification> Certifications { get; set; }
+        public virtual DbSet<DegreeLevel> DegreeLevels { get; set; }
+        public virtual DbSet<DegreeType> DegreeTypes { get; set; }
+        public virtual DbSet<Field> Fields { get; set; }
+        public virtual DbSet<Institution> Institutions { get; set; }
+        public virtual DbSet<UserEducation> UserEducations { get; set; }
     
         public virtual ObjectResult<Nullable<int>> delete_areacategoriescustoms(Nullable<int> categoryid)
         {
@@ -76,40 +82,56 @@ namespace SkillResultsAPI
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("delete_categoryskillcustoms", skillidParameter);
         }
     
-        public virtual ObjectResult<get_categoriesbyareacustoms_Result> get_categoriesbyareacustoms(Nullable<int> id)
+        public virtual ObjectResult<get_categoriesbyareacustoms_Result> get_categoriesbyareacustoms(Nullable<int> id, Nullable<int> orgid)
         {
             var idParameter = id.HasValue ?
                 new ObjectParameter("id", id) :
                 new ObjectParameter("id", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_categoriesbyareacustoms_Result>("get_categoriesbyareacustoms", idParameter);
+            var orgidParameter = orgid.HasValue ?
+                new ObjectParameter("orgid", orgid) :
+                new ObjectParameter("orgid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_categoriesbyareacustoms_Result>("get_categoriesbyareacustoms", idParameter, orgidParameter);
         }
     
-        public virtual ObjectResult<get_categoriesbyareamasters_Result> get_categoriesbyareamasters(Nullable<int> id)
+        public virtual ObjectResult<get_categoriesbyareamasters_Result> get_categoriesbyareamasters(Nullable<int> id, Nullable<int> orgid)
         {
             var idParameter = id.HasValue ?
                 new ObjectParameter("id", id) :
                 new ObjectParameter("id", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_categoriesbyareamasters_Result>("get_categoriesbyareamasters", idParameter);
+            var orgidParameter = orgid.HasValue ?
+                new ObjectParameter("orgid", orgid) :
+                new ObjectParameter("orgid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_categoriesbyareamasters_Result>("get_categoriesbyareamasters", idParameter, orgidParameter);
         }
     
-        public virtual ObjectResult<get_skillsbycategorycustoms_Result> get_skillsbycategorycustoms(Nullable<int> id)
+        public virtual ObjectResult<get_skillsbycategorycustoms_Result> get_skillsbycategorycustoms(Nullable<int> id, Nullable<int> orgid)
         {
             var idParameter = id.HasValue ?
                 new ObjectParameter("id", id) :
                 new ObjectParameter("id", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_skillsbycategorycustoms_Result>("get_skillsbycategorycustoms", idParameter);
+            var orgidParameter = orgid.HasValue ?
+                new ObjectParameter("orgid", orgid) :
+                new ObjectParameter("orgid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_skillsbycategorycustoms_Result>("get_skillsbycategorycustoms", idParameter, orgidParameter);
         }
     
-        public virtual ObjectResult<get_skillsbycategorymasters_Result> get_skillsbycategorymasters(Nullable<int> id)
+        public virtual ObjectResult<get_skillsbycategorymasters_Result> get_skillsbycategorymasters(Nullable<int> id, Nullable<int> orgid)
         {
             var idParameter = id.HasValue ?
                 new ObjectParameter("id", id) :
                 new ObjectParameter("id", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_skillsbycategorymasters_Result>("get_skillsbycategorymasters", idParameter);
+            var orgidParameter = orgid.HasValue ?
+                new ObjectParameter("orgid", orgid) :
+                new ObjectParameter("orgid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_skillsbycategorymasters_Result>("get_skillsbycategorymasters", idParameter, orgidParameter);
         }
     
         public virtual ObjectResult<user_object_Result> user_object(string userId)

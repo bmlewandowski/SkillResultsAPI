@@ -248,6 +248,9 @@
     <Compile Include="CategorySkillsMaster.cs">
       <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Certification.cs">
+      <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Classes\FetchTemplate.cs" />
     <Compile Include="Classes\GetValue.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -262,14 +265,29 @@
     <Compile Include="Controllers\CategoriesMastersController.cs" />
     <Compile Include="Controllers\CategorySkillsCustomsController.cs" />
     <Compile Include="Controllers\CategorySkillsMastersController.cs" />
+    <Compile Include="Controllers\CertificationsController.cs" />
+    <Compile Include="Controllers\DegreeLevelsController.cs" />
+    <Compile Include="Controllers\DegreeTypesController.cs" />
+    <Compile Include="Controllers\FieldsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstitutionsController.cs" />
     <Compile Include="Controllers\OrganizationUsersController.cs" />
     <Compile Include="Controllers\SkillsCustomsController.cs" />
     <Compile Include="Controllers\SkillsLocalsController.cs" />
     <Compile Include="Controllers\SkillsMastersController.cs" />
+    <Compile Include="Controllers\UserEducationsController.cs" />
     <Compile Include="Controllers\UserSkillsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DegreeLevel.cs">
+      <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DegreeType.cs">
+      <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Field.cs">
       <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="get_categoriesbyareacustoms_Result.cs">
@@ -286,6 +304,9 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Institution.cs">
+      <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -325,6 +346,9 @@
       <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="UserEducation.cs">
+      <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserSkill.cs">
       <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
     </Compile>
