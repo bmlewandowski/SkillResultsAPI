@@ -24,7 +24,13 @@ namespace SkillResultsAPI.Controllers
             return db.Institutions;
         }
 
-        //TODO:  GET INSTITUTIONS BY STATE
+        // GET: api/GetInstitutionsByState/CA
+        [Route("api/GetInstitutionsByState/{state}/")]
+        public IQueryable<Institution> GetInstitutionsByState(string state)
+        {
+            return db.Institutions.Where(x => x.State == state);
+
+        }
 
         // GET: api/Institutions/5
         [ResponseType(typeof(Institution))]
