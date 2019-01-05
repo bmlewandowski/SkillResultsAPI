@@ -354,6 +354,9 @@
     <Compile Include="UserSkill.cs">
       <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserWishlist.cs">
+      <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="user_object_Result.cs">
       <DependentUpon>SkillResultsAPIDataModel.tt</DependentUpon>
     </Compile>

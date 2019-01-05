@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Web.Http;
@@ -12,8 +13,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.SqlClient;
 using System.Data;
-using SendGrid.Helpers.Mail;
-using SendGrid;
 using System.Threading.Tasks;
 using SkillResultsAPI.Models;
 
@@ -34,21 +33,32 @@ namespace SkillResultsAPI.Controllers
         /// <param name="template"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<HttpResponseMessage> SendMail(string link, string sendaddress, string template)
+        public HttpResponseMessage SendMail(string link, string sendaddress, string template)
         {
-            var apiKey = System.Configuration.ConfigurationManager.AppSettings["SendGridAPIKey"];
-            var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("Postmoderncode@gmail.com", "SkillResults");
-            var to = new EmailAddress(sendaddress, sendaddress);
-            var subject = "SkillResults Login ";
-            //var htmlContent = "<p>The following is a secure link into Skill Results: <a href=\"http://40.87.90.212" + link + "\" title=\"Login\">Login to Skill Results</a></p>";
+
+            MailMessage msg = new MailMessage();
+            msg.To.Add(new MailAddress(sendaddress, sendaddress));
+            msg.From = new MailAddress("admin@skillresults.com", "SkillResults");
+            msg.Subject = "SkillResults Login";
+
             var htmlContent = FetchTemplate.ReadFile("~/Templates/" + template);
             htmlContent = htmlContent.Replace("{@link}", link);
-            var msg = MailHelper.CreateSingleEmail(from, to, subject, "", htmlContent);
-            var response = await client.SendEmailAsync(msg);
+
+            msg.Body = htmlContent;
+            msg.IsBodyHtml = true;
+
+            SmtpClient client = new SmtpClient();
+            client.UseDefaultCredentials = false;
+            client.Credentials = new System.Net.NetworkCredential("admin@skillresults.com", System.Configuration.ConfigurationManager.AppSettings["Office365Password"]);
+            client.Port = 587;
+            client.Host = "smtp.office365.com";
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.EnableSsl = true;
+            client.Send(msg);
 
             HttpResponseMessage response2 = Request.CreateResponse(HttpStatusCode.OK, "Mail Sent");
             return response2;
+
         }
 
         // GET: api/authenticate/id

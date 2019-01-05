@@ -10,15 +10,13 @@
         <EntityTypeShape EntityType="SkillResultsDBModel.AreaCategoriesMaster" Width="1.5" PointX="0.5" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.AreasLocal" Width="1.5" PointX="7" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.AspNetRole" Width="1.5" PointX="0.5" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUserClaim" Width="1.5" PointX="4.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUserLogin" Width="1.5" PointX="4.375" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.AspNetUser" Width="1.5" PointX="2.375" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesLocal" Width="1.5" PointX="8.625" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.CategorySkillsCustom" Width="1.5" PointX="5.375" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.Organization" Width="1.5" PointX="7" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.OrganizationUser" Width="1.5" PointX="7" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillResultsDBModel.SkillsLocal" Width="1.5" PointX="10.25" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.UserSkill" Width="1.5" PointX="10.375" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.UserSkill" Width="1.5" PointX="11" PointY="3.5" IsExpanded="true" />
         <AssociationConnector Association="SkillResultsDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="SkillResultsDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="SkillResultsDBModel.AspNetUserRoles" ManuallyRouted="false" />
@@ -29,12 +27,15 @@
         <EntityTypeShape EntityType="SkillResultsDBModel.CategoriesMaster" Width="1.5" PointX="3.75" PointY="9.625" />
         <EntityTypeShape EntityType="SkillResultsDBModel.SkillsCustom" Width="1.5" PointX="8.625" PointY="9.625" />
         <EntityTypeShape EntityType="SkillResultsDBModel.SkillsMaster" Width="1.5" PointX="7" PointY="9.625" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.Certification" Width="1.5" PointX="13.75" PointY="2.5" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.DegreeLevel" Width="1.5" PointX="12.125" PointY="0.75" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.DegreeType" Width="1.5" PointX="12.125" PointY="2.5" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.Field" Width="1.5" PointX="13.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.Institution" Width="1.5" PointX="10.375" PointY="0.75" />
-        <EntityTypeShape EntityType="SkillResultsDBModel.UserEducation" Width="1.5" PointX="8.625" PointY="0.75" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.Certification" Width="1.5" PointX="14.375" PointY="2.5" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.DegreeLevel" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.DegreeType" Width="1.5" PointX="12.75" PointY="2.5" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.Field" Width="1.5" PointX="14.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.Institution" Width="1.5" PointX="11" PointY="0.75" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.UserEducation" Width="1.5" PointX="9.25" PointY="0.75" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.Organization" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.OrganizationUser" Width="1.5" PointX="7.625" PointY="0.75" />
+        <EntityTypeShape EntityType="SkillResultsDBModel.UserWishlist" Width="1.5" PointX="7.625" PointY="3.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

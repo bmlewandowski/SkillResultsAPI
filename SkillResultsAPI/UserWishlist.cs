@@ -12,16 +12,16 @@ namespace SkillResultsAPI
     using System;
     using System.Collections.Generic;
     
-    public partial class OrganizationUser
+    public partial class UserWishlist
     {
         public int Id { get; set; }
-        public int OrgId { get; set; }
         public string UserId { get; set; }
-        public string ReportsTo { get; set; }
+        public int SkillId { get; set; }
+        public string Type { get; set; }
+        public int Rating { get; set; }
+        public int Priority { get; set; }
+        public int Private { get; set; }
         public System.DateTime Created { get; set; }
-        public int Admin { get; set; }
-        public string AuthKey01 { get; set; }
-        public string AuthKey02 { get; set; }
-        public Nullable<System.DateTime> AuthKeyExpires { get; set; }
+        public Nullable<System.DateTime> Modified { get; set; }
     }
 }

@@ -15,11 +15,21 @@
           <Property Name="Model" Type="varbinary(max)" Nullable="false" />
           <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.AreaCategoriesCustoms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AreaCategoriesCustoms">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="CategoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="AreaId" Type="int" Nullable="false" />
@@ -29,11 +39,19 @@
           <Property Name="OrgId" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.AreaCategoriesMasters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AreaCategoriesMasters">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="CategoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="AreaId" Type="int" Nullable="false" />
@@ -41,11 +59,20 @@
           <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.AreasCustoms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AreasCustoms">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="250" />
@@ -55,11 +82,19 @@
           <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="OrgId" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.AreasLocals' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AreasLocals">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="AreaId" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -68,11 +103,18 @@
           <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.AreasMasters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AreasMasters">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="250" />
@@ -131,11 +173,20 @@
           <Property Name="AccessFailedCount" Type="int" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.CategoriesCustoms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CategoriesCustoms">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="250" />
@@ -145,11 +196,19 @@
           <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="OrgId" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.CategoriesLocals' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CategoriesLocals">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -158,11 +217,18 @@
           <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.CategoriesMasters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CategoriesMasters">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="250" />
@@ -170,11 +236,21 @@
           <Property Name="Hidden" Type="bit" Nullable="false" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.CategorySkillsCustoms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CategorySkillsCustoms">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="CategoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SkillId" Type="int" Nullable="false" />
@@ -184,11 +260,19 @@
           <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.CategorySkillsMasters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CategorySkillsMasters">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="CategoryType" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SkillId" Type="int" Nullable="false" />
@@ -201,7 +285,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="DegreeLevels">
@@ -246,6 +330,10 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="StripeId" Type="nvarchar" MaxLength="128" />
+          <Property Name="PlanId" Type="nvarchar" MaxLength="128" />
+          <Property Name="SubscriptionId" Type="nvarchar" MaxLength="128" />
+          <Property Name="SubscriptionDate" Type="datetime2" Precision="7" />
           <Property Name="MaxUsers" Type="int" />
           <Property Name="Address" Type="nvarchar" MaxLength="100" />
           <Property Name="City" Type="nvarchar" MaxLength="100" />
@@ -263,17 +351,27 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrgId" Type="int" Nullable="false" />
           <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ReportsTo" Type="nvarchar" MaxLength="256" />
           <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Admin" Type="int" Nullable="false" />
           <Property Name="AuthKey01" Type="nvarchar" MaxLength="128" />
           <Property Name="AuthKey02" Type="nvarchar" MaxLength="128" />
           <Property Name="AuthKeyExpires" Type="datetime2" Precision="7" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.SkillsCustoms' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="SkillsCustoms">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="250" />
@@ -283,11 +381,19 @@
           <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="OrgId" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.SkillsLocals' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="SkillsLocals">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="SkillId" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="250" />
@@ -296,11 +402,18 @@
           <Property Name="OrgId" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkillResultsDB.dbo.SkillsMasters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="SkillsMasters">
           <Key>
             <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="250" />
@@ -347,6 +460,20 @@
           <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Modified" Type="datetime2" Precision="7" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserWishlist">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="SkillId" Type="int" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Rating" Type="int" Nullable="false" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="Private" Type="int" Nullable="false" />
+          <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Modified" Type="datetime2" Precision="7" />
         </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
           <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
@@ -434,21 +561,11 @@
         </Function>
         <EntityContainer Name="SkillResultsDBModelStoreContainer">
           <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AreaCategoriesCustoms" EntityType="Self.AreaCategoriesCustoms" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AreaCategoriesMasters" EntityType="Self.AreaCategoriesMasters" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AreasCustoms" EntityType="Self.AreasCustoms" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AreasLocals" EntityType="Self.AreasLocals" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AreasMasters" EntityType="Self.AreasMasters" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CategoriesCustoms" EntityType="Self.CategoriesCustoms" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CategoriesLocals" EntityType="Self.CategoriesLocals" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CategoriesMasters" EntityType="Self.CategoriesMasters" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CategorySkillsCustoms" EntityType="Self.CategorySkillsCustoms" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CategorySkillsMasters" EntityType="Self.CategorySkillsMasters" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Certifications" EntityType="Self.Certifications" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DegreeLevels" EntityType="Self.DegreeLevels" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DegreeTypes" EntityType="Self.DegreeTypes" Schema="dbo" store:Type="Tables" />
@@ -456,11 +573,165 @@
           <EntitySet Name="Institutions" EntityType="Self.Institutions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Organizations" EntityType="Self.Organizations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrganizationUsers" EntityType="Self.OrganizationUsers" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SkillsCustoms" EntityType="Self.SkillsCustoms" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SkillsLocals" EntityType="Self.SkillsLocals" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SkillsMasters" EntityType="Self.SkillsMasters" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserEducation" EntityType="Self.UserEducation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserSkills" EntityType="Self.UserSkills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserWishlist" EntityType="Self.UserWishlist" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AreaCategoriesCustoms" EntityType="Self.AreaCategoriesCustoms" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AreaCategoriesCustoms].[Id] AS [Id], 
+    [AreaCategoriesCustoms].[CategoryId] AS [CategoryId], 
+    [AreaCategoriesCustoms].[CategoryType] AS [CategoryType], 
+    [AreaCategoriesCustoms].[AreaId] AS [AreaId], 
+    [AreaCategoriesCustoms].[AreaType] AS [AreaType], 
+    [AreaCategoriesCustoms].[Created] AS [Created], 
+    [AreaCategoriesCustoms].[UserId] AS [UserId], 
+    [AreaCategoriesCustoms].[OrgId] AS [OrgId], 
+    [AreaCategoriesCustoms].[Type] AS [Type]
+    FROM [dbo].[AreaCategoriesCustoms] AS [AreaCategoriesCustoms]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AreaCategoriesMasters" EntityType="Self.AreaCategoriesMasters" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AreaCategoriesMasters].[Id] AS [Id], 
+    [AreaCategoriesMasters].[CategoryId] AS [CategoryId], 
+    [AreaCategoriesMasters].[CategoryType] AS [CategoryType], 
+    [AreaCategoriesMasters].[AreaId] AS [AreaId], 
+    [AreaCategoriesMasters].[AreaType] AS [AreaType], 
+    [AreaCategoriesMasters].[Created] AS [Created], 
+    [AreaCategoriesMasters].[Type] AS [Type]
+    FROM [dbo].[AreaCategoriesMasters] AS [AreaCategoriesMasters]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AreasCustoms" EntityType="Self.AreasCustoms" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AreasCustoms].[Id] AS [Id], 
+    [AreasCustoms].[Name] AS [Name], 
+    [AreasCustoms].[Value] AS [Value], 
+    [AreasCustoms].[Description] AS [Description], 
+    [AreasCustoms].[Created] AS [Created], 
+    [AreasCustoms].[Hidden] AS [Hidden], 
+    [AreasCustoms].[Type] AS [Type], 
+    [AreasCustoms].[UserId] AS [UserId], 
+    [AreasCustoms].[OrgId] AS [OrgId]
+    FROM [dbo].[AreasCustoms] AS [AreasCustoms]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AreasLocals" EntityType="Self.AreasLocals" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AreasLocals].[Id] AS [Id], 
+    [AreasLocals].[AreaId] AS [AreaId], 
+    [AreasLocals].[Name] AS [Name], 
+    [AreasLocals].[UserId] AS [UserId], 
+    [AreasLocals].[OrgId] AS [OrgId], 
+    [AreasLocals].[Description] AS [Description], 
+    [AreasLocals].[Created] AS [Created], 
+    [AreasLocals].[Type] AS [Type]
+    FROM [dbo].[AreasLocals] AS [AreasLocals]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AreasMasters" EntityType="Self.AreasMasters" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AreasMasters].[Id] AS [Id], 
+    [AreasMasters].[Name] AS [Name], 
+    [AreasMasters].[Value] AS [Value], 
+    [AreasMasters].[Description] AS [Description], 
+    [AreasMasters].[Created] AS [Created], 
+    [AreasMasters].[Hidden] AS [Hidden], 
+    [AreasMasters].[Type] AS [Type]
+    FROM [dbo].[AreasMasters] AS [AreasMasters]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CategoriesCustoms" EntityType="Self.CategoriesCustoms" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CategoriesCustoms].[Id] AS [Id], 
+    [CategoriesCustoms].[Name] AS [Name], 
+    [CategoriesCustoms].[Value] AS [Value], 
+    [CategoriesCustoms].[Description] AS [Description], 
+    [CategoriesCustoms].[Created] AS [Created], 
+    [CategoriesCustoms].[Hidden] AS [Hidden], 
+    [CategoriesCustoms].[Type] AS [Type], 
+    [CategoriesCustoms].[UserId] AS [UserId], 
+    [CategoriesCustoms].[OrgId] AS [OrgId]
+    FROM [dbo].[CategoriesCustoms] AS [CategoriesCustoms]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CategoriesLocals" EntityType="Self.CategoriesLocals" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CategoriesLocals].[Id] AS [Id], 
+    [CategoriesLocals].[CategoryId] AS [CategoryId], 
+    [CategoriesLocals].[Name] AS [Name], 
+    [CategoriesLocals].[UserId] AS [UserId], 
+    [CategoriesLocals].[OrgId] AS [OrgId], 
+    [CategoriesLocals].[Description] AS [Description], 
+    [CategoriesLocals].[Created] AS [Created], 
+    [CategoriesLocals].[Type] AS [Type]
+    FROM [dbo].[CategoriesLocals] AS [CategoriesLocals]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CategoriesMasters" EntityType="Self.CategoriesMasters" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CategoriesMasters].[Id] AS [Id], 
+    [CategoriesMasters].[Name] AS [Name], 
+    [CategoriesMasters].[Value] AS [Value], 
+    [CategoriesMasters].[Description] AS [Description], 
+    [CategoriesMasters].[Created] AS [Created], 
+    [CategoriesMasters].[Hidden] AS [Hidden], 
+    [CategoriesMasters].[Type] AS [Type]
+    FROM [dbo].[CategoriesMasters] AS [CategoriesMasters]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CategorySkillsCustoms" EntityType="Self.CategorySkillsCustoms" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CategorySkillsCustoms].[Id] AS [Id], 
+    [CategorySkillsCustoms].[CategoryId] AS [CategoryId], 
+    [CategorySkillsCustoms].[CategoryType] AS [CategoryType], 
+    [CategorySkillsCustoms].[SkillId] AS [SkillId], 
+    [CategorySkillsCustoms].[SkillType] AS [SkillType], 
+    [CategorySkillsCustoms].[UserId] AS [UserId], 
+    [CategorySkillsCustoms].[OrgId] AS [OrgId], 
+    [CategorySkillsCustoms].[Created] AS [Created], 
+    [CategorySkillsCustoms].[Type] AS [Type]
+    FROM [dbo].[CategorySkillsCustoms] AS [CategorySkillsCustoms]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CategorySkillsMasters" EntityType="Self.CategorySkillsMasters" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CategorySkillsMasters].[Id] AS [Id], 
+    [CategorySkillsMasters].[CategoryId] AS [CategoryId], 
+    [CategorySkillsMasters].[CategoryType] AS [CategoryType], 
+    [CategorySkillsMasters].[SkillId] AS [SkillId], 
+    [CategorySkillsMasters].[SkillType] AS [SkillType], 
+    [CategorySkillsMasters].[Created] AS [Created], 
+    [CategorySkillsMasters].[Type] AS [Type]
+    FROM [dbo].[CategorySkillsMasters] AS [CategorySkillsMasters]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SkillsCustoms" EntityType="Self.SkillsCustoms" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SkillsCustoms].[Id] AS [Id], 
+    [SkillsCustoms].[Name] AS [Name], 
+    [SkillsCustoms].[Value] AS [Value], 
+    [SkillsCustoms].[Description] AS [Description], 
+    [SkillsCustoms].[Created] AS [Created], 
+    [SkillsCustoms].[Hidden] AS [Hidden], 
+    [SkillsCustoms].[Type] AS [Type], 
+    [SkillsCustoms].[UserId] AS [UserId], 
+    [SkillsCustoms].[OrgId] AS [OrgId]
+    FROM [dbo].[SkillsCustoms] AS [SkillsCustoms]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SkillsLocals" EntityType="Self.SkillsLocals" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SkillsLocals].[Id] AS [Id], 
+    [SkillsLocals].[SkillId] AS [SkillId], 
+    [SkillsLocals].[Name] AS [Name], 
+    [SkillsLocals].[Description] AS [Description], 
+    [SkillsLocals].[Created] AS [Created], 
+    [SkillsLocals].[UserId] AS [UserId], 
+    [SkillsLocals].[OrgId] AS [OrgId], 
+    [SkillsLocals].[Type] AS [Type]
+    FROM [dbo].[SkillsLocals] AS [SkillsLocals]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SkillsMasters" EntityType="Self.SkillsMasters" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SkillsMasters].[Id] AS [Id], 
+    [SkillsMasters].[Name] AS [Name], 
+    [SkillsMasters].[Value] AS [Value], 
+    [SkillsMasters].[Description] AS [Description], 
+    [SkillsMasters].[Created] AS [Created], 
+    [SkillsMasters].[Hidden] AS [Hidden], 
+    [SkillsMasters].[Type] AS [Type]
+    FROM [dbo].[SkillsMasters] AS [SkillsMasters]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
@@ -607,35 +878,6 @@
           <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="Organization">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaxUsers" Type="Int32" />
-          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
-          <Property Name="Zip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Phone" Type="Int32" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Website" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
-        </EntityType>
-        <EntityType Name="OrganizationUser">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="OrgId" Type="Int32" Nullable="false" />
-          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
-          <Property Name="Admin" Type="Int32" Nullable="false" />
-          <Property Name="AuthKey01" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="AuthKey02" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="AuthKeyExpires" Type="DateTime" Precision="7" />
-        </EntityType>
         <EntityType Name="SkillsLocal">
           <Key>
             <PropertyRef Name="Id" />
@@ -705,8 +947,6 @@
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
           <EntitySet Name="CategoriesLocals" EntityType="Self.CategoriesLocal" />
           <EntitySet Name="CategorySkillsCustoms" EntityType="Self.CategorySkillsCustom" />
-          <EntitySet Name="Organizations" EntityType="Self.Organization" />
-          <EntitySet Name="OrganizationUsers" EntityType="Self.OrganizationUser" />
           <EntitySet Name="SkillsLocals" EntityType="Self.SkillsLocal" />
           <EntitySet Name="UserSkills" EntityType="Self.UserSkill" />
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
@@ -731,19 +971,19 @@
           <Parameter Name="skillid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="get_categoriesbyareacustoms" ReturnType="Collection(SkillResultsDBModel.get_categoriesbyareacustoms_Result)">
-          <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="id" Mode="In" Type="Int32" />
             <Parameter Name="orgid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="get_categoriesbyareamasters" ReturnType="Collection(SkillResultsDBModel.get_categoriesbyareamasters_Result)">
-          <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="id" Mode="In" Type="Int32" />
             <Parameter Name="orgid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="get_skillsbycategorycustoms" ReturnType="Collection(SkillResultsDBModel.get_skillsbycategorycustoms_Result)">
-          <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="id" Mode="In" Type="Int32" />
             <Parameter Name="orgid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="get_skillsbycategorymasters" ReturnType="Collection(SkillResultsDBModel.get_skillsbycategorymasters_Result)">
-          <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="id" Mode="In" Type="Int32" />
             <Parameter Name="orgid" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="user_object" ReturnType="Collection(SkillResultsDBModel.user_object_Result)">
@@ -762,6 +1002,9 @@
           <EntitySet Name="Fields" EntityType="SkillResultsDBModel.Field" />
           <EntitySet Name="Institutions" EntityType="SkillResultsDBModel.Institution" />
           <EntitySet Name="UserEducations" EntityType="SkillResultsDBModel.UserEducation" />
+          <EntitySet Name="Organizations" EntityType="SkillResultsDBModel.Organization" />
+          <EntitySet Name="OrganizationUsers" EntityType="SkillResultsDBModel.OrganizationUser" />
+          <EntitySet Name="UserWishlists" EntityType="SkillResultsDBModel.UserWishlist" />
         </EntityContainer>
         <ComplexType Name="get_categoriesbyareacustoms_Result">
           <Property Type="Int32" Name="id" Nullable="true" />
@@ -903,7 +1146,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="DegreeLevel">
@@ -968,6 +1211,54 @@
           <Property Name="ExpectedCompletionDate" Type="DateTime" Precision="7" />
           <Property Name="Private" Type="Boolean" Nullable="false" />
           <Property Name="Created" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="Organization">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="StripeId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="PlanId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SubscriptionId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SubscriptionDate" Type="DateTime" Precision="7" />
+          <Property Name="MaxUsers" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Zip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Phone" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+        </EntityType>
+        <EntityType Name="OrganizationUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrgId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ReportsTo" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Admin" Type="Int32" Nullable="false" />
+          <Property Name="AuthKey01" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="AuthKey02" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="AuthKeyExpires" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="UserWishlist">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SkillId" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rating" Type="Int32" Nullable="false" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="Private" Type="Int32" Nullable="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Modified" Type="DateTime" Precision="7" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1098,37 +1389,6 @@
                 <ScalarProperty Name="OrgId" ColumnName="OrgId" />
                 <ScalarProperty Name="Created" ColumnName="Created" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Organizations">
-            <EntityTypeMapping TypeName="SkillResultsDBModel.Organization">
-              <MappingFragment StoreEntitySet="Organizations">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="MaxUsers" ColumnName="MaxUsers" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="Zip" ColumnName="Zip" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Website" ColumnName="Website" />
-                <ScalarProperty Name="Created" ColumnName="Created" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="OrganizationUsers">
-            <EntityTypeMapping TypeName="SkillResultsDBModel.OrganizationUser">
-              <MappingFragment StoreEntitySet="OrganizationUsers">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="OrgId" ColumnName="OrgId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="Created" ColumnName="Created" />
-                <ScalarProperty Name="Admin" ColumnName="Admin" />
-                <ScalarProperty Name="AuthKey01" ColumnName="AuthKey01" />
-                <ScalarProperty Name="AuthKey02" ColumnName="AuthKey02" />
-                <ScalarProperty Name="AuthKeyExpires" ColumnName="AuthKeyExpires" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1405,6 +1665,57 @@
                 <ScalarProperty Name="OtherInstitution" ColumnName="OtherInstitution" />
                 <ScalarProperty Name="Institution" ColumnName="Institution" />
                 <ScalarProperty Name="OrgId" ColumnName="OrgId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Organizations">
+            <EntityTypeMapping TypeName="SkillResultsDBModel.Organization">
+              <MappingFragment StoreEntitySet="Organizations">
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="MaxUsers" ColumnName="MaxUsers" />
+                <ScalarProperty Name="SubscriptionDate" ColumnName="SubscriptionDate" />
+                <ScalarProperty Name="SubscriptionId" ColumnName="SubscriptionId" />
+                <ScalarProperty Name="PlanId" ColumnName="PlanId" />
+                <ScalarProperty Name="StripeId" ColumnName="StripeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrganizationUsers">
+            <EntityTypeMapping TypeName="SkillResultsDBModel.OrganizationUser">
+              <MappingFragment StoreEntitySet="OrganizationUsers">
+                <ScalarProperty Name="AuthKeyExpires" ColumnName="AuthKeyExpires" />
+                <ScalarProperty Name="AuthKey02" ColumnName="AuthKey02" />
+                <ScalarProperty Name="AuthKey01" ColumnName="AuthKey01" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="ReportsTo" ColumnName="ReportsTo" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OrgId" ColumnName="OrgId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserWishlists">
+            <EntityTypeMapping TypeName="SkillResultsDBModel.UserWishlist">
+              <MappingFragment StoreEntitySet="UserWishlist">
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Private" ColumnName="Private" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="SkillId" ColumnName="SkillId" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

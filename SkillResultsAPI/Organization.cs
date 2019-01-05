@@ -16,6 +16,10 @@ namespace SkillResultsAPI
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string StripeId { get; set; }
+        public string PlanId { get; set; }
+        public string SubscriptionId { get; set; }
+        public Nullable<System.DateTime> SubscriptionDate { get; set; }
         public Nullable<int> MaxUsers { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
